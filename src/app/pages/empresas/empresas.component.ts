@@ -10,32 +10,28 @@ import { Empresa } from 'src/app/shared/empresa';
   styleUrls: ['./empresas.component.scss']
 })
 export class EmpresasComponent implements OnInit {
-  empresa: Empresa[]
-  newTask: string;
-  tasks: string[] = [];
-  showMyContainer: boolean = false;
-  addTask(v) {
-    if (v != '')
-    this.tasks.push(v);
-    localStorage.setItem('colaboradores', JSON.stringify(this.tasks));
-    this.showMyContainer = false;
-    this.newTask = '';
-  }
-  @ViewChild('input') input;
-  focusTextInput() {
-    this.input.nativeElement.focus();
-  }
+  empresas: Empresa[] = [];
+  empsel: String = "Empresa 1";
   constructor(private host: ElementRef) {
-    const storedTasks = localStorage.getItem('colaboradores');
+    const storedTasks = localStorage.getItem('empresas');
     if (storedTasks) {
-      this.tasks = JSON.parse(storedTasks);
+      this.empresas = JSON.parse(storedTasks);
+    }
+    else {
+      const emp1 = new Empresa();
+      const emp2 = new Empresa();
+      emp1.name = "Empresa 1";
+      emp1.remainingTime = 11;
+      this.empresas.push(emp1);
+      emp2.name = "Empresa 2";
+      emp2.remainingTime = 22;
+      this.empresas.push(emp2);
+      localStorage.setItem('empresas', JSON.stringify(this.empresas));
     }
   }
-
-  removeTask(task: string) {
-    this.tasks = this.tasks.filter(t => t !== task);
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
-  }
   ngOnInit(): void {
+  }
+  selectempresa(emp: String) {
+    this.empsel = emp;
   }
 }

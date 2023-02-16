@@ -1,14 +1,9 @@
-<app-timer duration="600"></app-timer>
-<ul *ngFor="let task of tasks" class="lis">
-    <button (click)="removeTask(task)" class="botaolongo lis">
-        <ul  *ngFor="let todo of todoList">
-            <app-todo [id]='todo'  (delete)="deleteItem($event)"></app-todo>
-        </ul>
-        <app-todo [id]='todo' (delete)="deleteItem($event)" class="botaolongo">{{task}}</app-todo>
+<ul *ngFor="let empresa of empresas" class="lis">
+    <button  (click)="selectempresa(empresa.name)" class="botaolongo lis" >
+        <app-todo class="botaolongo">{{empresa.name}}</app-todo>
     </button>
 </ul>
-<div (click)="showMyContainer=!showMyContainer" (click)="focusTextInput()" class="alturatotal"></div>
-<div *ngIf="showMyContainer">
-    <input #input  (click)="addTask(input.value)"  (click)="input.value='' " class="botaolongo embaixo"  (keyup.enter)="addTask(input.value)"  (keyup.enter)="input.value='' ">
-    <div class="botaolongo alturatotal hid" (click)="addTask(input.value)"  (click)="input.value='' "></div>
-</div>
+
+<ul *ngFor="let empresa of empresas">
+<app-timer *ngIf="empsel==empresa.name" duration={{empresa.remainingTime}}></app-timer>
+</ul>
