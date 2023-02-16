@@ -8,6 +8,8 @@ import { ListComponent } from './list/list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
 import { ColaboradoresComponent } from './pages/colaboradores/colaboradores.component';
+import { BotaohomeComponent } from './botaohome/botaohome.component';
+import { MetricasComponent } from './pages/metricas/metricas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ColaboradoresComponent } from './pages/colaboradores/colaboradores.comp
     ListComponent,
     HomeComponent,
     EmpresasComponent,
-    ColaboradoresComponent
+    ColaboradoresComponent,
+    BotaohomeComponent,
+    MetricasComponent
   ],
   imports: [
     BrowserModule,
