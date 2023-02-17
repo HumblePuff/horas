@@ -11,6 +11,7 @@ import { ColaboradoresComponent } from './pages/colaboradores/colaboradores.comp
 import { BotaohomeComponent } from './botaohome/botaohome.component';
 import { MetricasComponent } from './pages/metricas/metricas.component';
 import { EditarComponent } from './pages/editar/editar.component';
+import { AddComponent } from './pages/add/add.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditarComponent } from './pages/editar/editar.component';
     ColaboradoresComponent,
     BotaohomeComponent,
     MetricasComponent,
-    EditarComponent
+    EditarComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

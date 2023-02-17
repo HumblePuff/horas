@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
+import { AddComponent } from './pages/add/add.component';
 import { ColaboradoresComponent } from './pages/colaboradores/colaboradores.component';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'teste',    component: TimerComponent,   pathMatch: 'full'},
   {path: 'empresas',    component: EmpresasComponent,   pathMatch: 'full'},
   {path: 'colaboradores',    component: ColaboradoresComponent,   pathMatch: 'full'},
-  {path: 'metricas',    component: MetricasComponent,   pathMatch: 'full'}
+  {path: 'metricas',    component: MetricasComponent,   pathMatch: 'full'},
+  {path: 'add',    component: AddComponent,   pathMatch: 'full'}
 
 ];
 
