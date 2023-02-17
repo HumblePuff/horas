@@ -94,7 +94,7 @@ export class TimerComponent implements OnInit {
       },
       err => { },
       () => {
-        if (this.isRunning) { this.dingAudio?.play() };
+        if (this.isRunning) { };
         this.stop();
       }
     );
