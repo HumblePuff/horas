@@ -10,6 +10,7 @@ import { EmpresasComponent } from './pages/empresas/empresas.component';
 import { ColaboradoresComponent } from './pages/colaboradores/colaboradores.component';
 import { BotaohomeComponent } from './botaohome/botaohome.component';
 import { MetricasComponent } from './pages/metricas/metricas.component';
+import { EditarComponent } from './pages/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MetricasComponent } from './pages/metricas/metricas.component';
     EmpresasComponent,
     ColaboradoresComponent,
     BotaohomeComponent,
-    MetricasComponent
+    MetricasComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

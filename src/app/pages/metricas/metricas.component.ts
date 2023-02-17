@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MetricasComponent implements OnInit {
 
+
+
+
   constructor() { }
 
   ngOnInit(): void {
