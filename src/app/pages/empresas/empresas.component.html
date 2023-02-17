@@ -1,9 +1,10 @@
+<ul *ngFor="let empresa of empresas">
+    <app-timer *ngIf="empsel==empresa.name" duration={{empresa.remainingTime}}></app-timer>
+    </ul>
 <ul *ngFor="let empresa of empresas" class="lis">
     <button  (click)="selectempresa(empresa.name)" class="botaolongo lis" >
         <app-todo class="botaolongo">{{empresa.name}}</app-todo>
     </button>
 </ul>
 
-<ul *ngFor="let empresa of empresas">
-<app-timer *ngIf="empsel==empresa.name" duration={{empresa.remainingTime}}></app-timer>
-</ul>
+

@@ -11,7 +11,7 @@ import { Empresa } from 'src/app/shared/empresa';
 })
 export class EmpresasComponent implements OnInit {
   empresas: Empresa[] = [];
-  empsel: String = "Empresa 1";
+  empsel: String = "";
   constructor(private host: ElementRef) {
     const storedTasks = localStorage.getItem('empresas');
     if (storedTasks) {
